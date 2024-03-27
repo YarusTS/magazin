@@ -22,7 +22,5 @@ Route::get('categories', 'CategoryController@index');
 Route::get('/basket/index', 'BasketController@index')->name('basket.index');
 Route::get('/basket/checkout', 'BasketController@checkout')->name('basket.checkout');
 
-Route::post('/basket/add/{id}', 'BasketController@add')
-    ->where('id', '[0-9]+')
-    ->name('basket.add');
+Route::post('/basket/add/{product}', 'BasketController@add')->name('basket.add');
 Route::resource('categories', CategoryController::class)->only(['index', 'show']);

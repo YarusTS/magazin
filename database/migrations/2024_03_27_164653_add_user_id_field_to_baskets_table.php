@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('baskets', function (Blueprint $table) {
-            $table->id();
-
-            $table->timestamps();
+        Schema::table('baskets', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id');
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('basket');
+        Schema::table('baskets', function (Blueprint $table) {
+            $table->dropColumn('user_id');
+        });
     }
 };
