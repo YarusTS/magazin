@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\methodObtaining;
+use App\Models\ObtainingMethod;
 use Illuminate\Http\Request;
 
-class MethodObtainingController extends Controller
+class ObtainingMethodController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class MethodObtainingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(methodObtaining $cr)
+    public function show(ObtainingMethod $cr)
     {
         //
     }
@@ -42,7 +42,7 @@ class MethodObtainingController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(methodObtaining $cr)
+    public function edit(ObtainingMethod $cr)
     {
         //
     }
@@ -50,7 +50,7 @@ class MethodObtainingController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, methodObtaining $cr)
+    public function update(Request $request, ObtainingMethod $cr)
     {
         //
     }
@@ -58,7 +58,7 @@ class MethodObtainingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(methodObtaining $cr)
+    public function destroy(ObtainingMethod $cr)
     {
         //
     }
