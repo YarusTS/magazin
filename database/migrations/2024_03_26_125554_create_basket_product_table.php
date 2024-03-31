@@ -16,14 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('basket_id');
             $table->unsignedBigInteger('product_id');
             $table->unsignedTinyInteger('quantity');
-            $table->foreign('basket_id')
-                ->references('id')
-                ->on('baskets')
-                ->cascadeOnDelete();
-            $table->foreign('product_id')
-                ->references('id')
-                ->on('products')
-                ->cascadeOnDelete();
+            $table->foreign('basket_id')->references('id')->on('baskets')->cascadeOnDelete();
+            $table->foreign('product_id')->references('id')->on('products')->cascadeOnDelete();
         });
 
     }

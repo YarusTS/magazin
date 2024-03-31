@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * @property int    $id
  * @property string $name
- * @property string $image
+// * @property string $image
  * @property string $created_at
  * @property string $updated_at
  */
@@ -18,12 +18,16 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Category extends Model
 {
     use HasFactory;
-    public function Categories(): HasMany
+    public function products(): BelongsToMany
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsToMany(Product::class);
     }
-    public function ChildrenCategories()
-    {
-        return $this->hasMany(Category::class)->with('categories');
-    }
+//    public function Categories(): HasMany
+//    {
+//        return $this->hasMany(Category::class);
+//    }
+//    public function ChildrenCategories()
+//    {
+//        return $this->hasMany(Category::class)->with('categories');
+//    }
 }

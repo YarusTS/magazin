@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('baskets', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('image');
-            $table->text('description');
+//            $table->string('name');
+//            $table->string('image');
+//            $table->text('description');
             $table->bigInteger('price');
             $table->bigInteger('quantity');
             $table->unsignedBigInteger('user_id');
@@ -32,6 +32,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('baskets');
+        Schema::table('baskets', function (Blueprint $table) {
+            $table->dropColumn('user_id');
+        });
     }
 };

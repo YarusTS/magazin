@@ -12,6 +12,12 @@ class BasketTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Product::factory()->create([
+            'price'        => '60',
+            'quantity'     => '10',
+            'user_id'      => '10',
+            'product_id'   => '10',
+            // не знаем как прописаь Seeders для значений !!!
+        ]);
     }
 }

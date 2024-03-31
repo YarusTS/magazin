@@ -12,6 +12,9 @@ class CategoryTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Brand::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+        ]);
     }
 }

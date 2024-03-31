@@ -19,6 +19,9 @@ return new class extends Migration
 //            $table->text('content')->nullable();
 //            $table->string('slug', 100)->unique();
             $table->string('image', 50)->nullable();
+            $table->text('description')->nullable();
+            $table->longText('content');
+            $table->string('article');
             $table->decimal('price', 10, 2, true)->default(0);
             $table->timestamps();
 

@@ -23,9 +23,9 @@ class BasketStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'         => 'required|string|min:3|max:25',
-            'image'        => 'required|image:jpg,jpeg,png|max:10240',
-            'description'  => 'required|string|min:3',
+//            'name'         => 'required|string|min:3|max:25',
+//            'image'        => 'required|image:jpg,jpeg,png|max:10240',
+//            'description'  => 'required|string|min:3',
             'price'        => 'required|bigInteger',
             'quantity'     => 'required|bigInteger',
             'user_id'      => 'integer',
